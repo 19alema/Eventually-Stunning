@@ -1,0 +1,232 @@
+/* General Fonts */
+
+@font-face {
+    font-family: myFont;
+    src: url(assets/fonts/fa-brands-400.woff2);
+}
+
+@font-face {
+    font-family: mygeneral;
+    src: url(assets/fonts/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2);
+}
+
+@font-face {
+    font-family: myfamily;
+    src: url(assets/fonts/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2);
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(assets/fonts/fa-brands-400.woff2);
+}
+
+/* End of General Fonts */
+
+body {
+    font-family: myFont; 
+    color: #000000; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER STYLE */
+
+.header {
+    background-image:url(assets/images/bg01.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    /* padding: 0 40px;  */
+}
+
+.single-icon i:hover {
+    cursor: pointer;
+    color: gray;
+}
+.link:hover {
+    background: transparent;
+    border: 2px solid gray;
+    transition: .3s;
+}
+
+.link:focus {
+    outline: 0;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: -10;
+}
+.container {
+    display: grid;
+    align-items: center;
+}
+
+.spacing>*+* {
+    margin-top: var(--spacing, 1.5rem)
+}
+
+
+/* Header */
+
+
+.header-text h1 {
+    font-family: mygeneral;
+    font-size: 2rem
+}
+
+
+.header-text p {
+    line-height: 1.6;
+    font-family: myfamily;
+    font-size: 15px;
+    opacity: .7;
+}
+
+.link {
+ font-weight: bold;
+ font-family: myfamily;
+}
+
+
+/* BUTTON AND INPUT STYLE */
+
+ input[type="email"] {
+   padding: .5rem .4rem;
+   border-radius: 5px;
+   background: transparent;
+   border:2px solid gray;
+   cursor: pointer;
+   color: #ffffff;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+
+.link {
+  padding: .5rem .4rem;
+  background-color: #1cb495;
+  margin: 0 1rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+
+/* LOWER HEADER*/
+
+.social-icon h3 {
+    font-size: .8rem;
+    font-family: myfamily;
+}
+
+.social-icon i {
+     padding-right: 1.5rem
+}
+
+.social-icon {
+    top: 5rem;
+    position: relative;
+    opacity: .5;
+}
+
+.icon-container {
+    display: flex;
+    
+}
+.single-icon {
+    margin: 25px 0;
+}
+
+
+/* DESKTOP */
+
+@media (max-width: 600px) {
+    
+     .header-text  {
+         display: none;
+         width: 100%;
+     }
+      .btn {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          top: 10rem;
+      }
+
+      input[type="email"] {
+          width: 100%;
+          
+      }
+
+      .header-content {
+          padding: 0 40px;
+      }
+    .social-icon {
+        padding: 0 40px;
+    }
+
+    .link {
+        width: 100%;
+        margin: 1rem;
+        text-align: center;
+        
+    }  
+     
+}
+
+/* SMALL SCREEN */
+
+@media (min-width : 600px) {
+    .header-text {
+        width: 28%;
+
+    }
+
+    .header {
+
+        padding: 0 40px;
+    }
+
+    .header-content {
+        position: relative;
+        top: 10rem;
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+    }
+     input[type="email"] {
+         width: 20%;
+         
+     }
+}
+
+/* TABLET */
+
+@media (max-width: 760px) {
+     .header-text {
+         width: 40%;
+
+     }
+}
